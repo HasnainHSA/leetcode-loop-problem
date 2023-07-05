@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://th.bing.com/th/id/R.b5097ced4bba1312e23741bbecdda1a3?rik=5Zy0lCJx5UU%2frw&pid=ImgRaw&r=0"
+      type="image/x-icon"
+    />
+    <!-- custom style  -->
+    <link rel="stylesheet" href="style.css" />
+    <title>leetcode Problem</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://cdn-images-1.medium.com/max/1600/0*GePc7lo4CF4A3guP.png"
+          alt="leet_code_logo"
+        />
+      </div>
+      <p class="sec-text">412 Fuzz Bizz Problem</p>
+      <button class="problem_btn">
+        <a href="https://leetcode.com/problems/fizz-buzz/"
+          >Solve this problem</a
+        >
+      </button>
+    </header>
+
+    <section>
+      <div class="container">
+        <input type="number" name="" id="input" />
+        <button class="sub-btn" onclick="fizzBuzz()">submit</button>
+      </div>
+      <div class="paragraph" id="para"></div>
+    </section>
+
+    <script>
+      var fizzBuzz = function () {
+        let user_input = document.getElementById("input");
+        let result = document.getElementById("para");
+
+        let output = [];
+        for (let i = 1; i <= user_input.value; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            output.push("FizzBuzz");
+          } else if (i % 3 == 0) {
+            output.push("Fizz");
+          } else if (i % 5 == 0) {
+            output.push("Buzz");
+          } else {
+            output.push(i.toString());
+          }
+        }
+        return (result.innerHTML += output);
+      };
+    </script>
+  </body>
+</html>
